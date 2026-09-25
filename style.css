@@ -1,0 +1,1380 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #111827;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+    max-width: 1400px;
+    margin: auto;
+    padding: 22px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo,
+.footer-logo {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.logo span,
+.footer-logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 42px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    font-weight: 600;
+    color: #475569;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 700px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    background:
+        radial-gradient(circle at 85% 20%, #dbeafe 0, transparent 28%),
+        linear-gradient(135deg, #f8fbff, #ffffff);
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.welcome {
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.hero h1 span {
+    color: #2563eb;
+}
+
+.hero h2 {
+    font-size: 30px;
+    color: #334155;
+    margin-bottom: 22px;
+}
+
+.hero-text {
+    max-width: 680px;
+    color: #64748b;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.primary-btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+}
+
+.secondary-btn {
+    color: #2563eb;
+    border-color: #2563eb;
+    background: transparent;
+}
+
+.secondary-btn:hover {
+    color: #ffffff;
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+.resume-btn {
+    color: #2563eb;
+    border-color: #2563eb;
+    background: #ffffff;
+}
+
+.resume-btn:hover {
+    color: #ffffff;
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO PROFILE
+========================= */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-circle {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #dbeafe, #eff6ff);
+    border: 12px solid #ffffff;
+    box-shadow:
+        0 30px 70px rgba(37, 99, 235, 0.18),
+        inset 0 0 40px rgba(37, 99, 235, 0.08);
+    animation: floating 4s ease-in-out infinite;
+}
+
+.profile-circle span {
+    font-size: 130px;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.section {
+    padding: 100px 5%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-title > p:first-child {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+}
+
+.section-title h2 span {
+    color: #2563eb;
+}
+
+.section-title > p:last-child {
+    margin-top: 15px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #93c5fd;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.about-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    font-size: 32px;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-section {
+    background: #f8fafc;
+    max-width: none;
+}
+
+.skills-container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.09);
+}
+
+.skill-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #64748b;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-section {
+    max-width: none;
+    background: #ffffff;
+}
+
+.projects-container {
+    max-width: 1600px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.project-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-image {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   RAKSHANBALA PROJECT IMAGE
+   ========================================================= */
+
+.rakshanbala-project {
+    position: relative;
+    overflow: hidden;
+    height: 235px;
+    background: #071a42;
+    border-radius: 0;
+}
+
+.rakshanbala-project img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .rakshanbala-project img {
+    transform: scale(1.06);
+}
+
+
+/* IMAGE OVERLAY */
+
+.rakshanbala-project .image-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    min-height: 48%;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 25px 30px;
+
+    background: linear-gradient(
+        to top,
+        rgba(3, 13, 35, 0.95),
+        rgba(3, 13, 35, 0.55),
+        transparent
+    );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* OVERLAY CONTENT */
+
+.overlay-content {
+    color: white;
+}
+
+.overlay-badge {
+    display: inline-block;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    color: #8ec5ff;
+
+    margin-bottom: 8px;
+}
+
+.overlay-content h3 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: white;
+}
+
+.overlay-content p {
+    margin: 0;
+
+    font-size: 17px;
+
+    color: #f1f5f9;
+}
+
+
+/* IF IMAGE IS NOT FOUND */
+
+.rakshanbala-project.image-error {
+    background:
+        linear-gradient(
+            135deg,
+            #06183d,
+            #123d91,
+            #2563eb
+        );
+
+    display: flex;
+    align-items: flex-end;
+}
+
+.rakshanbala-project.image-error::before {
+    content: "RakshanBala";
+    position: absolute;
+
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 32px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.rakshanbala-project.image-error .image-overlay {
+    z-index: 3;
+}
+/* =========================
+   STUDENT API IMAGE
+========================= */
+
+.project-placeholder {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-icon {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.dashboard-screen {
+    width: 72%;
+    padding: 28px;
+    border-radius: 25px;
+    background: #ffffff;
+    transform: rotate(-2deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-top {
+    color: #2563eb;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.dashboard-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.dashboard-row strong {
+    color: #0f172a;
+}
+
+.dashboard-row .online {
+    color: #16a34a;
+}
+
+
+/* =========================
+   LAUNDRY IMAGE
+========================= */
+
+.laundry-project {
+    padding: 35px 28px;
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: #ffffff;
+}
+
+.laundry-header {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 28px;
+}
+
+.laundry-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.laundry-order {
+    min-height: 88px;
+    padding: 18px;
+    border-radius: 17px;
+    background: #ffffff;
+    color: #172033;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.laundry-order strong {
+    display: block;
+    font-size: 16px;
+}
+
+.laundry-order small {
+    display: block;
+    margin-top: 5px;
+    color: #64748b;
+}
+
+.status {
+    padding: 9px 14px;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.pending {
+    color: #b45309;
+    background: #fef3c7;
+}
+
+.progress {
+    color: #1d4ed8;
+    background: #dbeafe;
+}
+
+.complete {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content {
+    padding: 32px;
+}
+
+.project-category {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.project-content h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.project-content > p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-section {
+    background: #f8fafc;
+    max-width: none;
+}
+
+.education-card {
+    max-width: 1000px;
+    margin: auto;
+    padding: 45px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: #ffffff;
+    border-radius: 25px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+}
+
+.education-icon {
+    min-width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    font-size: 38px;
+}
+
+.education-year {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-weight: 800;
+}
+
+.education-content h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.education-content h4 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.education-content p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contact-info h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #64748b;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-item > span {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    font-size: 23px;
+}
+
+.contact-item h4 {
+    margin-bottom: 3px;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #64748b;
+}
+
+.contact-item a:hover {
+    color: #2563eb;
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form {
+    padding: 35px;
+    border-radius: 25px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 17px;
+    padding: 16px 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    outline: none;
+    background: #ffffff;
+    color: #111827;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 55px 5% 25px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.footer-logo {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-content > p {
+    color: #94a3b8;
+    margin-bottom: 22px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    color: #cbd5e1;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #60a5fa;
+}
+
+.copyright {
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    text-align: center;
+}
+
+.copyright p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 18px 4%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .profile-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .profile-circle span {
+        font-size: 100px;
+    }
+
+    .about-container,
+    .skills-container,
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-circle span {
+        font-size: 80px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 42px;
+    }
+
+    .about-container,
+    .skills-container,
+    .projects-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 300px;
+    }
+
+    .education-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .contact-container {
+        gap: 35px;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
+/* =========================================================
+   PROFESSIONAL PROJECT CARD ANIMATIONS
+   ========================================================= */
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+
+    transform: translateY(0);
+}
+
+
+/* CARD HOVER */
+
+.project-card:hover {
+    transform: translateY(-12px);
+
+    box-shadow:
+        0 25px 55px rgba(15, 23, 42, 0.18),
+        0 8px 20px rgba(37, 99, 235, 0.10);
+}
+
+
+/* TOP LIGHT EFFECT */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.22),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.7s ease;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+.project-card:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE ANIMATION
+   ========================================================= */
+
+.project-image {
+    overflow: hidden;
+}
+
+.project-image img {
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+
+/* IMAGE ZOOM */
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   RAKSHANBALA IMAGE
+   ========================================================= */
+
+.rakshanbala-project img {
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+.project-card:hover .rakshanbala-project img {
+    transform: scale(1.10);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.rakshanbala-project .image-overlay {
+    transition:
+        opacity 0.5s ease,
+        padding 0.5s ease;
+}
+
+.project-card:hover .rakshanbala-project .image-overlay {
+    padding-bottom: 32px;
+}
+
+
+/* Overlay content animation */
+
+.overlay-content {
+    transform: translateY(10px);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.project-card:hover .overlay-content {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   PROJECT CONTENT ANIMATION
+   ========================================================= */
+
+.project-content {
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease;
+}
+
+.project-card:hover .project-content {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PROJECT CATEGORY
+   ========================================================= */
+
+.project-category {
+    transition:
+        letter-spacing 0.4s ease,
+        transform 0.4s ease;
+}
+
+.project-card:hover .project-category {
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+   ========================================================= */
+
+.project-content h3 {
+    transition:
+        transform 0.4s ease,
+        color 0.4s ease;
+}
+
+.project-card:hover .project-content h3 {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+   ========================================================= */
+
+.project-content > p {
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.project-card:hover .project-content > p {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   PROJECT TAGS
+   ========================================================= */
+
+.project-tags span {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-tags span:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 7px 15px rgba(37, 99, 235, 0.18);
+}
+
+
+/* =========================================================
+   STUDENT API ANIMATION
+   ========================================================= */
+
+.student-project .dashboard-screen {
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover .student-project .dashboard-screen {
+    transform: rotate(-1deg) translateY(-5px);
+}
+
+
+.student-project .dashboard-icon {
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .student-project .dashboard-icon {
+    transform:
+        translateY(-8px)
+        rotate(5deg);
+}
+
+
+/* =========================================================
+   LAUNDRY PROJECT ANIMATION
+   ========================================================= */
+
+.laundry-project .laundry-order {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-card:hover .laundry-order:nth-child(1) {
+    transform: translateX(5px);
+}
+
+.project-card:hover .laundry-order:nth-child(2) {
+    transform: translateX(9px);
+    transition-delay: 0.05s;
+}
+
+.project-card:hover .laundry-order:nth-child(3) {
+    transform: translateX(13px);
+    transition-delay: 0.1s;
+}
+
+
+/* =========================================================
+   CARD ENTRY ANIMATION
+   ========================================================= */
+
+@keyframes projectCardEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Cards appear smoothly */
+
+.projects-container .project-card {
+    animation:
+        projectCardEntry 0.8s ease both;
+}
+
+
+/* Different delay for each card */
+
+.projects-container .project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.projects-container .project-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.projects-container .project-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========================================================
+   MOBILE - REDUCE ANIMATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .project-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .project-card:hover .project-image img {
+        transform: scale(1.04);
+    }
+
+    .project-card::before {
+        display: none;
+    }
+
+}
