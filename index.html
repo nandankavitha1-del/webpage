@@ -73,7 +73,10 @@
                     Contact Me
                 </a>
 
-                <a href="Nandan_Resume.pdf" download class="btn resume-btn">
+                <!-- RESUME BUTTON -->
+                <a href="Nandan_Resume.pdf"
+                   class="btn resume-btn"
+                   id="resumeBtn">
                     📄 Download Resume
                 </a>
 
@@ -700,6 +703,70 @@
 
     </footer>
 
+
+    <!-- ================= RESUME DOWNLOAD ================= -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const resumeBtn = document.getElementById("resumeBtn");
+
+            if (resumeBtn) {
+
+                resumeBtn.addEventListener("click", async function (event) {
+
+                    event.preventDefault();
+
+                    try {
+
+                        const response = await fetch("./Nandan_Resume.pdf");
+
+                        if (!response.ok) {
+                            throw new Error("Resume PDF not found");
+                        }
+
+                        const pdfBuffer = await response.arrayBuffer();
+
+                        const pdfBlob = new Blob(
+                            [pdfBuffer],
+                            {
+                                type: "application/pdf"
+                            }
+                        );
+
+                        const pdfUrl = URL.createObjectURL(pdfBlob);
+
+                        const downloadLink = document.createElement("a");
+
+                        downloadLink.href = pdfUrl;
+                        downloadLink.download = "Nandan_Resume.pdf";
+
+                        document.body.appendChild(downloadLink);
+
+                        downloadLink.click();
+
+                        document.body.removeChild(downloadLink);
+
+                        setTimeout(function () {
+                            URL.revokeObjectURL(pdfUrl);
+                        }, 1000);
+
+                    } catch (error) {
+
+                        console.error("Resume Error:", error);
+
+                        alert(
+                            "Resume download failed. Please make sure Nandan_Resume.pdf is uploaded to the GitHub repository."
+                        );
+
+                    }
+
+                });
+
+            }
+
+        });
+    </script>
 
 </body>
 
